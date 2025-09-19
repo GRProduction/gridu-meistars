@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>GR Production – Grīdu ieklāšana: lamināts, vinils, parkets</title>
+  <meta name="description" content="Profesionāla grīdu ieklāšana – lamināts, vinils, parkets. Ātri un tīri. Precīzs darbs, materiālu sagāde un pēcapkalpošana 7 dienu laikā. Zvaniet +371 25607986." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="GR Production – Grīdu ieklāšana" />
+  <meta property="og:description" content="Lamināts, vinils, parkets. Ātri un tīri. Piezvani: +371 25607986." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="after.JPG" />
+  <meta name="theme-color" content="#2563eb" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+
+.headline-green {
+  background: linear-gradient(270deg, #16a34a 0%, #4ade80 50%, #22c55e 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 800;
+}
+    :root{
+      --bg:#f6f8fb; --card:#ffffff; --muted:#475569; --text:#0f172a;
+      --brand:#2563eb; --brand2:#22c55e; --accent:#f59e0b;
+      --container:1120px; --radius:18px
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Manrope,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;
+      background:linear-gradient(180deg,var(--bg) 0%,#fdf4e7 100%);
+      color:var(--text); line-height:1.6
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:var(--container);margin:0 auto;padding:0 20px}
+
+    /* Header */
+    header{
+      position:sticky;top:0;backdrop-filter:saturate(130%) blur(10px);
+      background:rgba(255,255,255,.85);
+      border-bottom:1px solid rgba(15,23,42,.08);
+      z-index:50
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;gap:12px;align-items:center;min-height:48px}
+    .brand__logo{display:flex;align-items:center;justify-content:center}
+    .brand__logo img{max-height:48px;width:auto;border-radius:10px}
+    .brand__title{font-weight:800;letter-spacing:.2px}
+
+    .nav__links{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+    .nav__link{opacity:.9}
+    .nav__link:hover{opacity:1}
+
+    /* Mobile menu */
+    .burger{display:none;background:none;border:none;padding:8px;cursor:pointer}
+    .burger span{display:block;width:24px;height:2px;background:#0f172a;margin:5px 0;border-radius:2px;transition:.2s}
+    @media (max-width: 900px){
+      .nav__links{display:none;position:absolute;left:0;right:0;top:64px;
+        background:#fff;border-bottom:1px solid rgba(15,23,42,.08);
+        padding:12px 20px;flex-direction:column;gap:10px}
+      .nav__links.is-open{display:flex}
+      .burger{display:block}
+    }
+
+    /* Buttons */
+    .btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:8px;
+      padding:12px 16px;border-radius:14px;background:var(--brand);color:#fff;
+      font-weight:800;border:1px solid rgba(15,23,42,.08);box-shadow:0 10px 30px rgba(37,99,235,.18);
+      transition:transform .15s ease, box-shadow .15s ease}
+    .btn:hover{transform:translateY(-1px);box-shadow:0 14px 34px rgba(37,99,235,.22)}
+    .btn--ghost{background:#fff;color:var(--text);border:1px solid rgba(15,23,42,.12);box-shadow:0 6px 18px rgba(2,6,23,.06)}
+    .btn--whatsapp{background:#25D366;color:#063;box-shadow:0 10px 30px rgba(37,211,102,.22)}
+
+    /* Hero */
+    .hero{padding:78px 0 42px;position:relative}
+    .hero__wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center}
+    .kicker{display:inline-flex;gap:8px;align-items:center;padding:6px 10px;border-radius:999px;background:rgba(37,99,235,.12);color:var(--brand);font-weight:700;font-size:12px;letter-spacing:.4px;text-transform:uppercase}
+    h1{font-size:clamp(30px,5vw,56px);line-height:1.1;margin:14px 0 14px}
+    .gradient{background:linear-gradient(90deg,var(--brand) 0%,var(--brand2) 60%,var(--accent) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero p{color:var(--muted);font-size:18px}
+    .hero__bullets{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:22px 0}
+    .pill{border:1px solid rgba(15,23,42,.12);border-radius:999px;padding:10px 12px;display:flex;align-items:center;gap:10px;background:#fff}
+    .hero__cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}
+    .hero__img{position:relative;overflow:hidden;border-radius:var(--radius);background:#ffffff;border:1px solid rgba(15,23,42,.08);box-shadow:0 12px 40px rgba(2,6,23,.06)}
+    .hero__img .grid{display:grid;grid-template-columns:1fr 1fr}
+    .hero__img figure{margin:0;position:relative}
+    .hero__img img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(108%)}
+    .hero__img figcaption{position:absolute;left:12px;top:12px;background:rgba(0,0,0,.55);padding:6px 10px;border-radius:999px;font-size:12px;color:#fff}
+
+    /* Sections */
+    section{padding:68px 0}
+    .section__title{font-size:28px;margin:0 0 10px}
+    .section__lead{color:var(--muted);margin:0 0 20px}
+
+    /* Cards */
+    .cards{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+    .card{grid-column:span 6;background:var(--card);border:1px solid rgba(15,23,42,.08);border-radius:var(--radius);padding:18px;box-shadow:0 10px 30px rgba(2,6,23,.05);opacity:.001;transform:translateY(16px);transition:opacity .6s ease, transform .6s ease}
+    .card h3{margin:0 0 8px}
+    .card ul{margin:0;padding-left:18px;color:#334155}
+
+    /* Pricing */
+    .pricing{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+    .price{grid-column:span 6;background:linear-gradient(180deg,rgba(37,99,235,.06),rgba(37,99,235,.02));border:1px solid rgba(37,99,235,.25);border-radius:var(--radius);padding:18px;box-shadow:0 10px 30px rgba(2,6,23,.05);opacity:.001;transform:translateY(16px);transition:opacity .6s ease, transform .6s ease}
+    .price h3{margin:0 0 10px}
+    .price__num{font-size:40px;font-weight:800;color:#0f172a}
+
+    /* Before/After Slider */
+    .ba{position:relative;overflow:hidden;border-radius:var(--radius);border:1px solid rgba(15,23,42,.08);background:#ffffff;box-shadow:0 12px 40px rgba(2,6,23,.06)}
+    .ba__wrap{position:relative;aspect-ratio:16/10}
+    .ba__img{position:absolute;inset:0}
+    .ba__img img{width:100%;height:100%;object-fit:cover}
+    .ba__img--after{clip-path:inset(0 0 0 50%)}
+    .ba__handle{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none}
+    .ba__bar{width:2px;height:100%;background:rgba(255,255,255,.85)}
+    .ba__knob{position:absolute;width:44px;height:44px;border-radius:999px;background:#fff;color:#000;display:grid;place-items:center;font-weight:800;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+
+    /* Gallery grid */
+    .ba-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+    .ba-grid>.ba{grid-column:span 12}
+    @media (min-width:900px){ .ba-grid>.ba{grid-column:span 6} }
+
+    /* CTA band */
+    .cta{background:linear-gradient(90deg,rgba(37,99,235,.12),rgba(34,197,94,.12));border:1px solid rgba(15,23,42,.1);border-radius:var(--radius);padding:22px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
+
+    /* Footer */
+    footer{padding:40px 0;color:#64748b;border-top:1px solid rgba(15,23,42,.08);background:linear-gradient(180deg,#ffffff 0%, #f8fafc 100%)}
+
+    /* Background FX */
+    .fx{position:fixed;z-index:-1;filter:blur(40px);opacity:.5}
+    .fx--blob1{width:420px;height:420px;left:-120px;top:80px;background:radial-gradient(closest-side,rgba(37,99,235,.35),transparent 70%);animation:float1 9s ease-in-out infinite}
+    .fx--blob2{width:480px;height:480px;right:-140px;top:260px;background:radial-gradient(closest-side,rgba(34,197,94,.3),transparent 70%);animation:float2 11s ease-in-out infinite}
+    .fx--spark{width:100vw;height:100vh;left:0;top:0;background-image:radial-gradient(rgba(37,99,235,.06) 1px, transparent 1px);background-size:26px 26px;mask-image:linear-gradient(#000,transparent 70%);opacity:.35}
+    @keyframes float1{50%{transform:translateY(18px) translateX(10px)}}
+    @keyframes float2{50%{transform:translateY(-16px) translateX(-8px)}}
+
+    /* Reveal */
+    .reveal{opacity:.001;transform:translateY(16px)}
+    .show{opacity:1 !important;transform:none !important}
+
+    /* Responsive tweaks */
+    @media (max-width: 900px){
+      .hero__wrap{grid-template-columns:1fr;gap:22px}
+      .hero__bullets{grid-template-columns:1fr 1fr}
+      .cards .card,.pricing .price{grid-column:span 12}
+      .brand__logo img{max-height:42px}
+    }
+    @media (prefers-reduced-motion: reduce){
+      *{animation:none!important;transition:none!important}
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="container nav" role="navigation" aria-label="Galvenā izvēlne">
+      <div class="brand">
+        <a href="#top" class="brand__logo" aria-label="Sākums">
+          <img src="logo.jpg" alt="GR Production logo">
+        </a>
+        <div class="brand__title">GR Production · Grīdu meistars</div>
+      </div>
+
+      <button class="burger" id="burger" aria-label="Atvērt izvēlni" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav__links" id="nav">
+        <a class="nav__link" href="#pakalpojumi">Pakalpojumi</a>
+        <a class="nav__link" href="#pirmspec">Pirms/Pēc</a>
+        <a class="nav__link" href="#cenas">Cenas</a>
+        <a class="nav__link btn btn--ghost" href="#kontakti">Kontakti</a>
+        <a class="nav__link btn btn--whatsapp" href="https://wa.me/37125607986" rel="noopener" aria-label="Rakstīt WhatsApp">WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- BACKGROUND EFFECTS -->
+  <div class="fx fx--blob1" aria-hidden="true"></div>
+  <div class="fx fx--blob2" aria-hidden="true"></div>
+  <div class="fx fx--spark" aria-hidden="true"></div>
+
+  <!-- MAIN CONTENT -->
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__wrap">
+        <div>
+          <span class="kicker">Noguris no vecās grīdas?</span>
+          <h1><span class="headline-green">Jauna grīda pāris dienās!</span> Ātri, kvalitatīvi un droši — grīdas, kas kalpos gadiem</h1>
+          <p>Precīzs darbs, materiālu sagāde un <strong>pēcapkalpošana 7 dienu laikā</strong>. Strādājam Jūsu reģionā – sazinieties, lai saņemtu cenu uzreiz.</p>
+          <div class="hero__bullets" role="list">
+           <div class="pill" role="listitem">✔ Ātri un kvalitatīvi</div>
+           <div class="pill" role="listitem">✔ Profesionāls rezultāts</div>
+           <div class="pill" role="listitem">✔ Pilns serviss un materiālu sagāde</div>
+          </div>
+          <div class="hero__cta">
+            <div class="hero__cta">
+  <a class="btn btn--ghost" href="tel:+37125607986" aria-label="Zvanīt +371 25607986">
+    Zvanīt: +371 25607986
+  </a>
+
+  <a class="btn" href="mailto:grproduction@gmail.com">
+    Rakstīt e-pastu
+  </a>
+
+  <a class="btn btn--whatsapp" href="https://wa.me/37125607986" target="_blank" rel="noopener">
+    WhatsApp
+  </a>
+</div>
+          </div>
+        </div>
+
+        <div class="hero__img" aria-label="Pirms un pēc">
+          <div class="grid">
+            <figure>
+              <img src="before.png" alt="Grīda pirms – vecais segums pirms nomaiņas" loading="lazy" width="1200" height="800"/>
+              <figcaption>Pirms</figcaption>
+            </figure>
+            <figure>
+              <img src="after.JPG" alt="Grīda pēc – jauns grīdas segums ieklāts" loading="lazy" width="1200" height="800"/>
+              <figcaption>Pēc</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+ <!-- 3 PĪLĀRI -->
+    <section id="pilari">
+      <div class="container">
+        <h2 class="section__title">Kvalitātes pamatprincipi</h2>
+        <p class="section__lead">Pamats, uz kura balstās mūsu darbs – ātrums, kvalitāte un pilns serviss bez stresa.</p>
+
+        <div class="cards reveal">
+          
+          <article class="card">
+            <h3>⚡ Ātrums</h3>
+            <p>No mērījuma līdz gatavai grīdai pāris dienās. Precīzi plānojam darbus, lai Tu jau drīz varētu baudīt jaunu grīdu.</p>
+          </article>
+
+          <article class="card">
+            <h3>✅ Kvalitāte</h3>
+            <p>Strādājam ar pārbaudītiem materiāliem un profesionālām tehnikām. Garantējam, ka grīda kalpos gadiem bez problēmām.</p>
+          </article>
+
+          <article class="card">
+            <h3>🛠️ Pilns serviss</h3>
+            <p>No vecās grīdas demontāžas līdz grīdlīstēm un sliekšņiem – viss vienās rokās. Sagāde, uzstādīšana un pēcapkalpošana bez stresa.</p>
+          </article>
+
+          <article class="card">
+            <h3>🤝 Garantija</h3>
+            <p>Visiem darbiem sniedzam garantiju un nodrošinām pēcapkalpošanu 7 dienu laikā — drošība arī pēc projekta pabeigšanas.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PAKALPOJUMI -->
+<section id="pakalpojumi">
+  <div class="container">
+    <h2 class="section__title">Pilns grīdu serviss</h2>
+    <p class="section__lead">
+      Nodrošinām pilnu grīdu ieklāšanas ciklu: sagatavošanu, betonēšanu, lamināta, vinila, parketa un paklāju grīdu ieklāšanu, kā arī apdari un pēcapkalpošanu ar garantiju.
+    </p>
+
+    <div class="cards reveal">
+
+      <article class="card">
+        <h3>1. 🧹 Demontāža</h3>
+        <p>Veco grīdu demontāža un utilizācija, nodrošinot tīru un sagatavotu pamatni turpmākajiem darbiem.</p>
+      </article>
+
+      <article class="card">
+        <h3>2. ⚙️ Sagatavošana</h3>
+        <p>Pilna pamatnes sagatavošana — pārbaude, izlīdzināšana un apakšklājs, lai jaunā grīda kalpotu gadiem bez defektiem.</p>
+      </article>
+
+      <article class="card">
+        <h3>3. 🏗️ Betonēšana</h3>
+        <p>Ja nepieciešams — jaunas betona grīdas izbūve, armatūra un līmeņošana.</p>
+      </article>
+
+      <article class="card">
+        <h3>4. 🪵 Grīdu ieklāšana</h3>
+        <p>Lamināts, vinils (LVT/SPC), parkets vai paklāju segumi — profesionāli un precīzi.</p>
+      </article>
+
+      <article class="card">
+        <h3>5. 🎨 Apdare</h3>
+        <p>Grīdlīstes, sliekšņi un pēdējie apdares darbi, lai rezultāts būtu perfekts.</p>
+      </article>
+
+      <article class="card">
+        <h3>6. 📦 Pilns serviss</h3>
+        <p>Materiālu piegāde, bezmaksas mērījumi, detalizēta tāme un garantija.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+    <!-- PIRMS / PĒC GALERIJA -->
+    <section id="pirmspec">
+      <div class="container">
+        <h2 class="section__title">Pirms / Pēc – reāli darbi</h2>
+        <p class="section__lead">Pavelc slīdni, lai redzētu atšķirību.</p>
+
+        <div class="ba-grid">
+          <!-- 1. pāris -->
+          <div class="ba reveal">
+            <div class="ba__wrap" data-split="50">
+              <div class="ba__img ba__img--before">
+                <img src="before1.jpeg" alt="Pirms – apakšklājs un dēļu ieklāšana" loading="lazy" width="1600" height="1000">
+              </div>
+              <div class="ba__img ba__img--after">
+                <img src="after.JPG" alt="Pēc – gatavā grīda" loading="lazy" width="1600" height="1000">
+              </div>
+              <div class="ba__handle" aria-hidden="true">
+                <div class="ba__bar"></div>
+                <div class="ba__knob">↔</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. pāris -->
+          <div class="ba reveal">
+            <div class="ba__wrap" data-split="55">
+              <div class="ba__img ba__img--before">
+                <img src="before2.jpg" alt="Pirms – vecā grīda" loading="lazy" width="1600" height="1000">
+              </div>
+              <div class="ba__img ba__img--after">
+                <img src="after2.jpg" alt="Pēc – jaunā grīda" loading="lazy" width="1600" height="1000">
+              </div>
+              <div class="ba__handle" aria-hidden="true">
+                <div class="ba__bar"></div>
+                <div class="ba__knob">↔</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. pāris -->
+          <div class="ba reveal">
+            <div class="ba__wrap" data-split="55">
+              <div class="ba__img ba__img--before">
+                <img src="before3.jpg" alt="Pirms – vecā grīda" loading="lazy" width="1600" height="1000">
+              </div>
+              <div class="ba__img ba__img--after">
+                <img src="after3.JPG" alt="Pēc – jaunā grīda" loading="lazy" width="1600" height="1000">
+              </div>
+              <div class="ba__handle" aria-hidden="true">
+                <div class="ba__bar"></div>
+                <div class="ba__knob">↔</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. pāris -->
+          <div class="ba reveal">
+            <div class="ba__wrap" data-split="55">
+              <div class="ba__img ba__img--before">
+                <img src="before4.jpg" alt="Pirms – vecā grīda" loading="lazy" width="1600" height="1000">
+              </div>
+              <div class="ba__img ba__img--after">
+                <img src="after4.jpg" alt="Pēc – jaunā grīda" loading="lazy" width="1600" height="1000">
+              </div>
+              <div class="ba__handle" aria-hidden="true">
+                <div class="ba__bar"></div>
+                <div class="ba__knob">↔</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CENAS -->
+    <section id="cenas">
+      <div class="container">
+        <h2 class="section__title">Cenas un piedāvājums</h2>
+        <p class="section__lead">Cenas ir atkarīgas no platības un sarežģītības. Sazinieties, lai saņemtu precīzu tāmi.</p>
+        <div class="pricing reveal">
+          <div class="price card">
+            <h3>Lamināta ieklāšana</h3>
+            <div class="price__num">no 8 € / m²</div>
+            <ul>
+              <li>Taisnā ieklāšana</li>
+              <li>Pamatnes pārbaude</li>
+              <li>Konsultācija par materiāliem</li>
+            </ul>
+          </div>
+          <div class="price card">
+            <h3>Komplekts “gatavs rezultāts”</h3>
+            <div class="price__num">pēc vienošanās</div>
+            <ul>
+              <li>Demontāža + izlīdzināšana</li>
+              <li>Apakšklājs + grīdas segums</li>
+              <li>Grīdlīstes un sliekšņi</li>
+            </ul>
+          </div>
+        </div>
+        <div class="cta" style="margin-top:18px">
+          <strong>Vēlaties tāmi šodien?</strong>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn" href="#pieteikums" aria-label="Aizpildīt pieteikuma formu">Aizpildīt pieteikumu</a>
+            <a class="btn btn--whatsapp" href="https://wa.me/37125607986" rel="noopener">WhatsApp</a>
+            <a class="btn btn--ghost" href="tel:+37125607986">Zvanīt: +371 25607986</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   <!-- KONTAKTI -->
+<section id="kontakti">
+  <div class="container">
+    <h2 class="section__title">Kontakti</h2>
+    <p class="section__lead">Sazinieties un vienosimies par mērījumu laiku vai nosūtiet telpas platību, lai aprēķinātu cenu.</p>
+    
+    <div class="cards">
+
+      <!-- Kontaktinformācija -->
+      <article class="card" style="display:flex;flex-direction:column;gap:8px">
+        <h3>GR Production · Grīdu meistars</h3>
+        <div>📞 Tel.: <a href="tel:+37125607986">+371 25607986</a></div>
+        <div>✉ E-pasts: <a href="mailto:grproduction@gmail.com">grproduction@gmail.com</a></div>
+        <div>💬 WhatsApp: <a href="https://wa.me/37125607986" rel="noopener">rakstīt čatā</a></div>
+  <div class="hours">
+  <div class="hours__title">Darba laiks</div>
+  <div class="hours__badge">Pēc vienošanās</div>
+</div>      </article>
+
+      <!-- Ātrā pieprasījuma forma -->
+<article class="card">
+  <h3>Ātrā pieprasījuma forma</h3>
+  <form id="pieteikums" action="https://formspree.io/f/mnqkjxyz" method="POST" style="display:grid;gap:10px">
+    
+    <!-- Klienta e-pasts -->
+    <input required type="email" name="epasts" placeholder="Jūsu e-pasts" aria-label="E-pasts" autocomplete="email" style="padding:12px;border-radius:12px;border:1px solid rgba(15,23,42,.12)">
+    
+    <!-- Klienta vārds -->
+    <input required name="vards" placeholder="Vārds" aria-label="Vārds" autocomplete="name" style="padding:12px;border-radius:12px;border:1px solid rgba(15,23,42,.12)">
+    
+    <!-- Klienta tālrunis -->
+    <input required type="tel" name="talrunis" placeholder="Tālrunis" aria-label="Tālrunis" autocomplete="tel" inputmode="tel" style="padding:12px;border-radius:12px;border:1px solid rgba(15,23,42,.12)">
+    
+    <!-- Platība -->
+    <input name="platiba" placeholder="Platība m² (piem., 35)" aria-label="Platība" inputmode="numeric" style="padding:12px;border-radius:12px;border:1px solid rgba(15,23,42,.12)">
+    
+    <!-- Ziņa -->
+    <textarea name="zina" rows="3" placeholder="Īss apraksts (segums, termiņš u.c.)" aria-label="Ziņa" style="padding:12px;border-radius:12px;border:1px solid rgba(15,23,42,.12)"></textarea>
+    
+    <!-- Poga -->
+    <button class="btn" type="submit">Nosūtīt pieprasījumu</button>
+    <p id="formMsg" style="margin:6px 0 0;color:#475569;font-size:13px"></p>
+  </form>
+</article>
+
+    </div>
+  </div>
+</section>
+
+  <!-- FOOTER -->
+  <footer>
+  <div class="container">
+    <div class="footer__col">
+      <h4>GR Production</h4>
+      <div>© <span id="y"></span> GR Production · Grīdu meistars</div>
+      <div>Profesionāla grīdu ieklāšana un betonēšana visā Latvijā.</div>
+    </div>
+
+    <div class="footer__col">
+      <h4>Saites</h4>
+      <a href="#pakalpojumi">Pakalpojumi</a>
+      <a href="#pirmspec">Pirms / Pēc</a>
+      <a href="#cenas">Cenas</a>
+      <a href="#kontakti">Kontakti</a>
+    </div>
+
+    <div class="footer__col">
+      <h4>Kontakti</h4>
+      <div>📞 <a href="tel:+37125607986">+371 25607986</a></div>
+      <div>✉ <a href="mailto:grproduction@gmail.com">grproduction@gmail.com</a></div>
+      <div>💬 <a href="https://wa.me/37125607986" target="_blank">WhatsApp</a></div>
+    </div>
+  </div>
+</footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Mobilā izvēlne
+    const burger = document.getElementById('burger');
+    const nav = document.getElementById('nav');
+    if(burger && nav){
+      burger.addEventListener('click', ()=>{
+        const open = nav.classList.toggle('is-open');
+        burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    }
+
+    // Dinamiskais gads
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Inicializē VISUS .ba__wrap (vairāku slīdņu atbalsts)
+    function initBeforeAfterSliders(root=document){
+      const sliders = root.querySelectorAll('.ba__wrap');
+      const clamp = (n,min,max)=>Math.max(min,Math.min(max,n));
+
+      sliders.forEach(wrap=>{
+        const after = wrap.querySelector('.ba__img--after');
+        const knob  = wrap.querySelector('.ba__knob');
+        const start = Number(wrap.dataset.split || 50);
+
+        const setByPercent = (pct)=>{
+          const r = wrap.getBoundingClientRect();
+          const x = r.width * (pct/100);
+          after.style.clipPath = `inset(0 0 0 ${pct}%)`;
+          knob.style.left = `${x-22}px`;
+          knob.style.top  = `${(r.height/2)-22}px`;
+        };
+
+        const onMove = (clientX)=>{
+          const r = wrap.getBoundingClientRect();
+          const x = clamp(clientX - r.left, 0, r.width);
+          const pct = (x / r.width) * 100;
+          after.style.clipPath = `inset(0 0 0 ${pct}%)`;
+          knob.style.left = `${x-22}px`;
+          knob.style.top  = `${(r.height/2)-22}px`;
+        };
+
+        let dragging=false;
+        wrap.addEventListener('pointerdown', e=>{
+          dragging = true;
+          wrap.setPointerCapture(e.pointerId);
+          onMove(e.clientX);
+        });
+        wrap.addEventListener('pointermove', e=>{ if(dragging) onMove(e.clientX); });
+        wrap.addEventListener('pointerup',   ()=> dragging=false);
+        wrap.addEventListener('lostpointercapture', ()=> dragging=false);
+
+        window.addEventListener('load',   ()=> setByPercent(start));
+        window.addEventListener('resize', ()=> setByPercent(start));
+      });
+    }
+    initBeforeAfterSliders();
+
+    // Scroll reveal
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target) } })
+    },{threshold: .12});
+    document.querySelectorAll('.reveal,.card,.price').forEach(el=>io.observe(el));
+
+    // Konfeti pēc formas nosūtīšanas (neliels prieks)
+    const form = document.getElementById('leadForm');
+    const msg = document.getElementById('formMsg');
+    function confetti(){
+      const c = document.createElement('canvas');
+      Object.assign(c.style,{position:'fixed',inset:0,zIndex:9999,pointerEvents:'none'});
+      document.body.appendChild(c);
+      const ctx = c.getContext('2d');
+      const dpr = window.devicePixelRatio || 1; let w,h;
+      const resize=()=>{w=window.innerWidth;h=window.innerHeight;c.width=w*dpr;c.height=h*dpr;ctx.setTransform(dpr,0,0,dpr,0,0)};
+      resize(); window.addEventListener('resize',resize,{once:true});
+      const colors=['#2563eb','#22c55e','#f59e0b','#0ea5e9'];
+      const parts = Array.from({length:120},()=>({x:Math.random()*w,y:-20-Math.random()*60,r:4+Math.random()*6,c:colors[(Math.random()*colors.length)|0],vy:2+Math.random()*4,vx:-2+Math.random()*4,rot:Math.random()*Math.PI}));
+      let t=0; (function tick(){t++; ctx.clearRect(0,0,w,h);
+        for(const p of parts){p.x+=p.vx; p.y+=p.vy; p.vy+=0.05; p.rot+=0.1;
+          ctx.save(); ctx.translate(p.x,p.y); ctx.rotate(p.rot); ctx.fillStyle=p.c; ctx.fillRect(-p.r,-p.r,p.r*2,p.r*2); ctx.restore();
+        } if(t<180) requestAnimationFrame(tick); else c.remove();
+      })();
+    }
+    if(form){
+      form.addEventListener('submit', (e)=>{
+        e.preventDefault();
+        msg.textContent = 'Paldies! Ziņa nosūtīta. Sazināsimies drīzumā.';
+        confetti();
+        fetch(form.action,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(form)}).catch(()=>{});
+        form.reset();
+      });
+    }
+
+    // Izceļ šodienu darba laikā
+    (function highlightToday(){
+      const today = new Date().getDay(); // 0=sv,1=p,...
+      document.querySelectorAll('.hours__list li').forEach(li=>{
+        if(Number(li.dataset.day)===today){ li.classList.add('is-today'); }
+      });
+    })();
+  </script>
+
+ <!-- Schema.org struktūru dati -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "@id": "https://www.tavadomena.lv/#grproduction",
+  "name": "GR Production – Grīdu ieklāšana",
+  "description": "Profesionāla grīdu ieklāšana – lamināts, vinils, parkets. Sagatavošana, izlīdzināšana, grīdlīstes un materiālu sagāde. Ātri un kvalitatīvi. Pēcapkalpošana 7 dienu laikā.",
+  "image": "https://www.tavadomena.lv/logo.jpg",
+  "logo": "https://www.tavadomena.lv/logo.jpg",
+  "url": "https://www.tavadomena.lv",
+  "telephone": "+37125607986",
+  "email": "grproduction@gmail.com",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Latvija"
+  },
+  "serviceType": [
+    "Lamināta ieklāšana",
+    "Vinila ieklāšana",
+    "Parketa ieklāšana",
+    "Grīdas izlīdzināšana",
+    "Grīdlīstu montāža",
+    "Betonēšanas darbi"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "LV",
+    "addressLocality": "Latvija"
+  },
+ .hours__badge {
+  display: inline-block;
+  background: #dcfce7;   /* gaiši zaļš fons */
+  color: #166534;         /* tumši zaļš teksts */
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 14px;
+  margin-top: 6px;
+}
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Customer Service",
+    "telephone": "+37125607986",
+    "email": "grproduction@gmail.com",
+    "availableLanguage": ["lv","ru","en"]
+  },
+  "sameAs": [
+    "https://wa.me/37125607986"
+  ]
+}
+</script>
+
+<style>
+footer {
+  width: 100%; /* ✅ pilnā ekrāna platumā */
+  background: #ffffff;
+  border-top: 1px solid rgba(15,23,42,.08);
+  padding: 60px 0;
+  color: #475569;
+  font-size: 15px;
+}
+
+footer .container {
+  max-width: 1190px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer__col {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 200px;
+}
+
+.footer__col h4 {
+  font-size: 16px;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+footer a {
+  color: inherit;
+  opacity: 0.8;
+  text-decoration: none;
+  transition: opacity .2s;
+}
+
+footer a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+  footer .container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .footer__col {
+    text-align: center;
+  }
+}
+
+<script>
+</body>
+</html>
