@@ -2628,7 +2628,7 @@
 </div>
 </div>
 </section>
-
+<!-- SERVICE DETAILS -->
 <section id="epoxy">
 <div class="container reveal">
 <div class="service-label" data-i18n="epoxyLabel">Pakalpojums • Epoksīda grīdas</div>
@@ -3472,7 +3472,10 @@ Seko mums:
 </iframe>
 </div>
 </div>
-<form class="contact-form" onsubmit="handleContactSubmit(event);">
+<form
+  class="contact-form"
+  action="https://formspree.io/f/TAVS_FORM_ID"
+  method="POST">
 <input data-i18n-placeholder="formName" name="name" placeholder="Vārds, Uzvārds" required="" type="text">
 <input data-i18n-placeholder="formEmail" name="email" placeholder="E-pasts" required="" type="email"/>
 <input data-i18n-placeholder="formObjectLocation" name="location" placeholder="Objekta atrašanās vieta" type="text"/>
@@ -3928,7 +3931,7 @@ metaTitle: "GR Production – Grīdu risinājumi",
 
     pricingGrindingTitle: "Grīdu slīpēšana",
     pricingGrindingNote: "Atkarīgs no vecā pārklājuma, nelīdzenumiem un nepieciešamās apstrādes pakāpes (slīpēšanas reižu skaits).",
-    pricingGrindingExample: "Piemērs: 50 m² pamatnes slīpēšana pirms epoksīda ≈ 1500 € + PVN.",
+    pricingGrindingExample: "Piemērs: 50 m² pamatnes slīpēšana ar eļļošanu ≈ 1500 € + PVN.",
 
     pricingStandardTitle: "Standarta grīdas",
     pricingStandardNote: "LVT, SPC, lamināta un citu segumu ieklāšana bez materiāla izmaksām. Cena atkarīga no bāzes sagatavošanas un telpas sarežģītības.",
@@ -4901,23 +4904,33 @@ document.addEventListener("keydown", (e)=>{
   }
 
   /* ===== Forma – UX ===== */
-  function handleContactSubmit(e) {
-    e.preventDefault();
-    const form = e.target;
-    if (!form.checkValidity()) {
-      form.reportValidity();
-      return;
-    }
-    const statusEl = document.getElementById("form-status");
-    if (statusEl) {
-      statusEl.textContent = ((translations[currentLang]||translations.lv).formThanks || "Paldies! Sazināsimies 1 darba dienas laikā.");
-      statusEl.classList.remove("error");
+  async function handleContactSubmit(e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const statusEl = document.getElementById("form-status");
+  const data = new FormData(form);
+
+  try {
+    const res = await fetch("https://formspree.io/f/TAVS_FORM_ID", {
+      method: "POST",
+      body: data,
+      headers: { "Accept": "application/json" }
+    });
+
+    if (res.ok) {
+      statusEl.textContent = "Paldies! Sazināsimies 1 darba dienas laikā.";
       statusEl.classList.add("visible");
+      form.reset();
+    } else {
+      statusEl.textContent = "Kļūda! Lūdzu pamēģini vēlreiz.";
+      statusEl.classList.add("error", "visible");
     }
-    form.reset();
+  } catch {
+    statusEl.textContent = "Savienojuma kļūda.";
+    statusEl.classList.add("error", "visible");
   }
-
-
+}
 
   /* ===== Cookies + Privacy ===== */
   function initCookieBanner(){
