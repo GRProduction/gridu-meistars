@@ -3301,14 +3301,6 @@ Kā notiek izskatīšana
 <img alt="Epoksīda grīda – dzīvojamā istaba" src="gallery/epoxy/3.PNG"/>
 <div class="gallery-tag">Epoksīda grīda dzīvojamā istaba</div>
 </div>
-<div class="gallery-item">
-<img alt="Epoksīda grīda – garāža" src="gallery/epoxy/6.PNG"/>
-<div class="gallery-tag">Epoksīda grīda – garāža</div>
-</div>
-<div class="gallery-item">
-<img alt="Epoksīda grīda – projekts 3" src="gallery/epoxy/4.PNG"/>
-<div class="gallery-tag">Epoksīda grīda – projekts</div>
-</div>
 </div>
 </div>
 <!-- BETONA GRĪDAS -->
@@ -3353,14 +3345,6 @@ Kā notiek izskatīšana
 <div class="gallery-item">
 <img alt="Slīpēšana – projekts 3" src="gallery/grinding/3.PNG"/>
 <div class="gallery-tag">Nolakota grīda</div>
-</div>
-<div class="gallery-item">
-<img alt="Slīpēšana – projekts 4" src="gallery/grinding/4.PNG"/>
-<div class="gallery-tag">Slīpēšana – projekts</div>
-</div>
-<div class="gallery-item">
-<img alt="Slīpēšana – projekts 5" src="gallery/grinding/5.PNG"/>
-<div class="gallery-tag">Slīpēšana – projekts</div>
 </div>
 </div>
 </div>
@@ -3473,36 +3457,37 @@ Seko mums:
 </div>
 </div>
 <form
+  class="contact-form"
   action="https://formspree.io/f/meorqwoq"
   method="POST"
 >
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
+  <input data-i18n-placeholder="formName" name="name" placeholder="Vārds, Uzvārds" required type="text" />
+
+  <input data-i18n-placeholder="formEmail" name="email" placeholder="E-pasts" required type="email" />
+
+  <input data-i18n-placeholder="formObjectLocation" name="location" placeholder="Objekta atrašanās vieta" type="text" />
+
+  <div class="form-group">
+    <label style="font-size:13px; margin-bottom:2px;">Interesējošais pakalpojums:</label>
+    <div class="service-choice">
+      <label><input name="service" type="checkbox" value="epoxy" /> Epoksīda grīdas</label>
+      <label><input name="service" type="checkbox" value="concrete" /> Betona grīdas</label>
+      <label><input name="service" type="checkbox" value="grinding" /> Grīdu slīpēšana</label>
+      <label><input name="service" type="checkbox" value="standard" /> LVT / SPC / lamināts</label>
+    </div>
+  </div>
+
+  <textarea data-i18n-placeholder="formMessage" name="message"
+    placeholder="Īss apraksts – telpas veids, kvadratūra, esošais segums" rows="4"></textarea>
+
+  <!-- (nav obligāti) tēma Formspree inboxam -->
+  <input type="hidden" name="_subject" value="Jauns pieteikums no grproduction.lv" />
+
+  <button class="btn-primary" data-i18n="formSubmit" type="submit">Nosūtīt pieprasījumu</button>
+
+  <div aria-live="polite" class="form-status" id="form-status"></div>
 </form>
-<input data-i18n-placeholder="formName" name="name" placeholder="Vārds, Uzvārds" required="" type="text">
-<input data-i18n-placeholder="formEmail" name="email" placeholder="E-pasts" required="" type="email"/>
-<input data-i18n-placeholder="formObjectLocation" name="location" placeholder="Objekta atrašanās vieta" type="text"/>
-<div class="form-group">
-<label style="font-size:13px; margin-bottom:2px;">Interesējošais pakalpojums:</label>
-<div class="service-choice">
-<label><input name="service" type="checkbox" value="epoxy"/> Epoksīda grīdas</label>
-<label><input name="service" type="checkbox" value="concrete"/> Betona grīdas</label>
-<label><input name="service" type="checkbox" value="grinding"/> Grīdu slīpēšana</label>
-<label><input name="service" type="checkbox" value="standard"/> LVT / SPC / lamināts</label>
 </div>
-</div>
-<textarea data-i18n-placeholder="formMessage" name="message" placeholder="Īss apraksts – telpas veids, kvadratūra, esošais segums" rows="4"></textarea>
-<button class="btn-primary" data-i18n="formSubmit" type="submit">Nosūtīt pieprasījumu</button>
-<div aria-live="polite" class="form-status" id="form-status"></div>
-</input></form>
 </div>
 </section>
 <!-- FOOTER -->
@@ -3777,7 +3762,7 @@ metaTitle: "GR Production – Grīdu risinājumi",
     navFaq: "Jautājumi",
 
     // Hero
-    heroKicker: "Profesionālas grīdu sistēmas",
+    heroKicker: "Ātri·Tīri·Kvalitatīvi",
     heroTitle: "GRĪDU RISINĀJUMI INDUSTRIĀLĀM UN PRIVĀTĀM TELPĀM",
     heroSub: "Epoksīda un betona grīdas, grīdu slīpēšana un standarta segumu ieklāšana. Strādājam visā Latvijā – jaunbūvēm un renovācijām.",
     heroOpenHours: "Šobrīd slēgts · atvērts otrdien no 08:00",
@@ -4075,7 +4060,7 @@ metaTitle: "GR Production – Grīdu risinājumi",
   navContact: "Contact",
   navCta: "Get in touch",
 
-  heroKicker: "Professional flooring systems",
+  heroKicker: "Fast·Clean·High Quality",
   heroTitle: "FLOORING SOLUTIONS FOR INDUSTRIAL AND RESIDENTIAL SPACES",
   heroSub:
     "Epoxy and concrete floors, substrate grinding and standard flooring installation. We work across Latvia — new builds and renovations.",
@@ -4372,7 +4357,7 @@ metaTitle: "GR Production – Напольные решения",
     navGallery: "Галерея",
     navContact: "Контакты",
     navCta: "Связаться",
-    heroKicker: "Профессиональные напольные системы",
+    heroKicker: "Быстрое·Чистое·Высокое качество",
     heroTitle: "НАПОЛЬНЫЕ РЕШЕНИЯ ДЛЯ ПРОМЫШЛЕННЫХ И ЧАСТНЫХ ПОМЕЩЕНИЙ",
     heroSub: "Эпоксидные и бетонные полы, шлифовка основания и укладка стандартных покрытий. Работаем по всей Латвии — новостройки и реновации.",
     heroOpenHours: "Проверяем время работы…",
