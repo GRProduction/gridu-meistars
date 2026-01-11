@@ -808,7 +808,7 @@
 /* ===== SERVICES GRID (4 kartītes) ===== */
 .services-grid{
   display:grid;
-  grid-template-columns:repeat(4, minmax(0,1fr));
+  grid-template-columns:repeat(3, minmax(0,1fr));
   overflow:hidden;
   border-radius:16px;
   box-shadow:0 10px 25px rgba(0,0,0,.08);
@@ -2587,7 +2587,6 @@
 <option data-i18n-option="wizardNeedNewFloor" value="new-floor">Jauna grīda</option>
 <option data-i18n-option="wizardNeedRenovation" value="renovation">Esošās grīdas atjaunošana</option>
 <option data-i18n-option="wizardNeedBasePrep" value="base-prep">Grīdas slīpēšana</option>
-<option data-i18n-option="wizardNeedStructure" value="structure">Betona pamatne / plātne</option>
 </select>
 </div>
 <button class="btn-primary wizard-btn" data-i18n="wizardBtn" onclick="suggestService()" type="button">
@@ -2606,17 +2605,10 @@
 </a>
 <a class="service-card" href="#concrete">
 <div class="service-card-icon">
-<i class="fa-solid fa-trowel"></i>
-</div>
-<h3 data-i18n="svcConcreteTitle">Betonēšana</h3>
-<p data-i18n="svcConcreteSub">Industriālās un privātās betona grīdas.</p>
-</a>
-<a class="service-card" href="#grinding">
-<div class="service-card-icon icon-image">
 <img loading="lazy" decoding="async" alt="Betonēšana" src="slipmasina.png"/>
 </div>
 <h3 data-i18n="svcGrindingTitle">Grīdu slīpēšana</h3>
-<p data-i18n="svcGrindingSub">Pamatnes sagatavošana pirms jaunā seguma.</p>
+<p data-i18n="svcGrindingSub">Dēļu un parketa slīpēšana un lakošana.</p>
 </a>
 <a class="service-card" href="#standard">
 <div class="service-card-icon">
@@ -2663,46 +2655,12 @@ Uzzināt aptuveno cenu
 </div>
 </div>
 </section>
-<section id="concrete">
-<div class="container reveal">
-<div class="service-detail">
-<div class="service-image">
-<img loading="lazy" decoding="async" alt="Betona grīda" src="concrete.PNG"/>
-</div>
-<div class="service-text">
-<div class="service-label" data-i18n="concreteLabel">Pakalpojums • Betonēšana</div>
-<h3 data-i18n="concreteTitle">Betona grīdas industriālām un privātām telpām</h3>
-<div class="service-tags">
-<span class="service-tag">Angāri
-<span class="service-tag">Noliktavas
-<span class="service-tag">Garāžas
-<span class="service-tag">Pamatu plātnes
-</div>
-<p data-i18n="concreteText1">
-            Ieklājam betona grīdas noliktavām, angāriem, ražošanas cehiem, garāžām un privātmājām – gan jaunbūvēs, gan esošos objektos.
-          </p>
-<p data-i18n="concreteText2">
-            No pamatnes sagatavošanas un armēšanas līdz gludai vai raupjai virsmai – izvēlamies risinājumu atbilstoši slodzei, ekspluatācijai un budžetam.
-          </p>
-<ul>
-<li data-i18n="concreteBullet1">Industriālās grīdas intensīvai mehāniskai slodzei.</li>
-<li data-i18n="concreteBullet2">Iespējama slīpēšana un papildus virsmas aizsardzība.</li>
-<li data-i18n="concreteBullet3">Precīza līmeņošana ar profesionālu tehniku.</li>
-</ul>
-<button class="btn-price" onclick="goToPrice('concrete')">
-<i class="fa-solid fa-euro-sign"></i>
-Uzzināt aptuveno cenu
-</button>
-</div>
-</div>
-</div>
-</section>
 <section id="grinding">
 <div class="container reveal">
 <div class="service-detail">
 <div class="service-text">
 <div class="service-label" data-i18n="grindingLabel">Pakalpojums • Grīdu slīpēšana</div>
-<h3 data-i18n="grindingTitle">Pamatnes sagatavošana kvalitatīvam segumam</h3>
+<h3 data-i18n="grindingTitle">Dēļu un parketa slīpēšana un lakošana.</h3>
 <div class="service-tags">
 <span class="service-tag">Vecas grīdas
 <span class="service-tag">Pirms epoksīda
@@ -3002,20 +2960,6 @@ Kā notiek izskatīšana
             Piemērs: 40 m² garāža ≈ 1000 € + PVN (bez pamatnes labošanas).
           </p>
 </div>
-<div class="pricing-card" id="pricing-concrete">
-<h3 data-i18n="pricingConcreteTitle">Betona grīdas</h3>
-<div class="price-row">
-<span class="price-from" data-i18n="pricingFrom">no</span>
-<span class="price-value">20 €</span>
-<span class="price-unit">/ m²</span>
-</div>
-<p class="pricing-note" data-i18n="pricingConcreteNote">
-            Iekļauj pamatnes sagatavošanu, armēšanu un betonēšanu. Cena atkarīga no biezuma, piekļuves un objekta sarežģītības.
-          </p>
-<p class="pricing-example">
-            Piemērs: 60 m² angāra grīda ≈ 1500 € + PVN (atkarībā no biezuma un armēšanas).
-          </p>
-</div>
 <div class="pricing-card" id="pricing-grinding">
 <h3 data-i18n="pricingGrindingTitle">Grīdu slīpēšana</h3>
 <div class="price-row">
@@ -3058,7 +3002,6 @@ Kā notiek izskatīšana
       <select id="calc-service">
         <option value="" data-i18n-option="chooserSelect">Izvēlies...</option>
         <option value="epoxy">Epoksīda grīda</option>
-        <option value="concrete">Betona grīda</option>
         <option value="grinding">Grīdu slīpēšana</option>
         <option value="standard">LVT / SPC / lamināts</option>
       </select>
@@ -3303,33 +3246,6 @@ Kā notiek izskatīšana
 </div>
 </div>
 </div>
-<!-- BETONA GRĪDAS -->
-<div class="gallery-section">
-<h3 class="gallery-section-title">Betonēšana</h3>
-<div class="gallery-grid">
-<div class="gallery-item">
-<img alt="Pamata līmeņošana" src="gallery/concrete/1.JPG"/>
-<div class="gallery-tag">Pamatu līmeņošana</div>
-</div>
-<div class="gallery-item">
-<img alt="Betona grīda – ražošanas cehs" src="gallery/concrete/2.PNG"/>
-<div class="gallery-tag">Garāžas grīdas betonēšana</div>
-</div>
-<div class="gallery-item">
-<img alt="Betona grīda – projekts 3" src="gallery/concrete/3.JPG"/>
-<div class="gallery-tag">Garāžas grīdas betonēšana</div>
-</div>
-<div class="gallery-item">
-<img alt="Betona grīda – projekts 4" src="gallery/concrete/4.JPG"/>
-<div class="gallery-tag">Pagraba grīdas betonēšana</div>
-</div>
-<!-- Papildbildes -->
-<div class="gallery-item">
-<img alt="Betona grīda – projekts 5" src="gallery/concrete/5.JPG"/>
-<div class="gallery-tag">Betona grīda – projekts</div>
-</div>
-</div>
-</div>
 <!-- GRĪDU SLĪPĒŠANA -->
 <div class="gallery-section">
 <h3 class="gallery-section-title">Grīdu slīpēšana</h3>
@@ -3389,7 +3305,7 @@ Kā notiek izskatīšana
 <img loading="lazy" decoding="async" alt="MAPEI" src="partners/mapei.png"/>
 <img loading="lazy" decoding="async" alt="Sika" src="partners/sika.png"/>
 <img loading="lazy" decoding="async" alt="Stonhard" src="partners/stonhard.png"/>
-<img loading="lazy" decoding="async" alt="Tikkurila" src="partners/tikkurila.png"/>
+<img loading="lazy" decoding="async" alt="Tikkurila" src="partners/tikkurila.PNG"/>
 <img loading="lazy" decoding="async" alt="Weber" src="partners/weber.png"/>
 <img loading="lazy" decoding="async" alt="Knauf" src="partners/knauf.png"/>
 <img loading="lazy" decoding="async" alt="Ceresit" src="partners/ceresit.png"/>
@@ -3795,11 +3711,11 @@ metaTitle: "GR Production – Grīdu risinājumi",
     chooserBtn: "Atrast piemērotāko risinājumu",
 
     svcEpoxyTitle: "Epoksīda grīdas",
-    svcEpoxySub: "Bezšuvju, izturīgi un viegli kopjami pārklājumi.",
+    svcEpoxySub: "Bezšuvju, izturīgi un viegli kopjami pārklājumi",
     svcConcreteTitle: "Betonēšana",
-    svcConcreteSub: "Industriālās un privātās betona grīdas.",
+    svcConcreteSub: "Industriālās un privātās betona grīdas",
     svcGrindingTitle: "Grīdu slīpēšana",
-    svcGrindingSub: "Grīdas slīpēšana",
+    svcGrindingSub: "Dēļu un parketa slīpēšana un lakošana",
     svcStandardTitle: "Standarta grīdu ieklāšana",
     svcStandardSub: "Flīzēšana, lamināts, parkets un vinila grīdas",
 
