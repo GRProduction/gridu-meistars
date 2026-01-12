@@ -8,7 +8,7 @@
 <link href="favicon.png" rel="apple-touch-icon"/>
 <link href="favicon.png" rel="shortcut icon"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="GR Production – epoksīda un betona grīdas, grīdu slīpēšana, LVT, SPC un lamināta grīdu ieklāšana visā Latvijā." name="description"/>
+<meta content="GR Production – epoksīda grīdas, grīdu slīpēšana, LVT, SPC un lamināta grīdu ieklāšana visā Latvijā." name="description"/>
 <!-- Fonts & Icons -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
 <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" referrerpolicy="no-referrer" rel="stylesheet">
@@ -941,19 +941,7 @@
 
 /* tagi */
 .service-tags{
-  display:flex;
-  flex-wrap:wrap;
-  gap:6px;
-  margin:4px 0 6px;
-}
-
-.service-tag{
-  font-size:11px;
-  padding:3px 8px;
-  border-radius:999px;
-  background:#f0f5e8;
-  color:#4b5b30;
-  border:1px solid #d6e1c4;
+  display:none !important;
 }
 
 /* attēls */
@@ -2971,7 +2959,7 @@ Kā notiek izskatīšana
             Atkarīgs no vecā pārklājuma, nelīdzenumiem un nepieciešamās apstrādes pakāpes (slīpēšanas reižu skaits).
           </p>
 <p class="pricing-example">
-            Piemērs: 50 m² pamatnes slīpēšana pirms epoksīda ≈ 1500 € + PVN.
+            Piemērs: 50 m² pamatnes slīpēšana un lakošana ≈ 1500 € + PVN.
           </p>
 </div>
 <div class="pricing-card" id="pricing-standard">
@@ -3387,7 +3375,6 @@ Seko mums:
     <label style="font-size:13px; margin-bottom:2px;">Interesējošais pakalpojums:</label>
     <div class="service-choice">
       <label><input name="service" type="checkbox" value="epoxy" /> Epoksīda grīdas</label>
-      <label><input name="service" type="checkbox" value="concrete" /> Betona grīdas</label>
       <label><input name="service" type="checkbox" value="grinding" /> Grīdu slīpēšana</label>
       <label><input name="service" type="checkbox" value="standard" /> LVT / SPC / lamināts</label>
     </div>
@@ -3412,7 +3399,9 @@ Seko mums:
 <div>© <span id="year"> GR Production. Visas tiesības aizsargātas.</div>
 <div data-i18n="footerDev">Izstrāde: Tavs web partneris</div>
       <div class="footer-links">
-        <a href="#" class="footer-link" onclick="openPrivacyModal();return false;" data-i18n="privacyLink">Privātuma politika</a>
+        <a href="privacy.html" target="_blank" rel="noopener">
+  Privātuma politika
+</a>
         <span style="opacity:.5;">•
         <a href="#" class="footer-link" onclick="openCookieSettings();return false;" data-i18n="cookieLink">Sīkdatnes</a>
       </div>
@@ -3628,7 +3617,7 @@ let currentLang = "lv";
 const translations = {
   lv: {
 metaTitle: "GR Production – Grīdu risinājumi",
-    metaDescription: "GR Production – epoksīda un betona grīdas, grīdu slīpēšana, LVT, SPC un lamināta grīdu ieklāšana visā Latvijā.",
+    metaDescription: "GR Production – epoksīda grīdas, grīdu slīpēšana, LVT, SPC un lamināta grīdu ieklāšana visā Latvijā.",
     quickCall: "Zvanīt",
     quickForm: "Pieteikums",
     callPopupTitle: "Piezvanīt 30 sek.?",
@@ -3680,7 +3669,7 @@ metaTitle: "GR Production – Grīdu risinājumi",
     // Hero
     heroKicker: "Ātri·Tīri·Kvalitatīvi",
     heroTitle: "GRĪDU RISINĀJUMI INDUSTRIĀLĀM UN PRIVĀTĀM TELPĀM",
-    heroSub: "Epoksīda un betona grīdas, grīdu slīpēšana un standarta segumu ieklāšana. Strādājam visā Latvijā – jaunbūvēm un renovācijām.",
+    heroSub: "Epoksīda grīdas, grīdu slīpēšana un standarta segumu ieklāšana. Strādājam visā Latvijā – jaunbūvēm un renovācijām.",
     heroOpenHours: "Šobrīd slēgts · atvērts otrdien no 08:00",
     heroPhone: "+371 25607986",
     heroPrimary: "SAZINĀTIES",
@@ -3712,8 +3701,6 @@ metaTitle: "GR Production – Grīdu risinājumi",
 
     svcEpoxyTitle: "Epoksīda grīdas",
     svcEpoxySub: "Bezšuvju, izturīgi un viegli kopjami pārklājumi",
-    svcConcreteTitle: "Betonēšana",
-    svcConcreteSub: "Industriālās un privātās betona grīdas",
     svcGrindingTitle: "Grīdu slīpēšana",
     svcGrindingSub: "Dēļu un parketa slīpēšana un lakošana",
     svcStandardTitle: "Standarta grīdu ieklāšana",
@@ -4940,7 +4927,7 @@ document.addEventListener("keydown", (e)=>{
 
     pricingEpoxyExample: "Piemērs: 40 m² garāža ≈ 1000 € + PVN (bez pamatnes labošanas).",
     pricingConcreteExample: "Piemērs: 60 m² angāra grīda ≈ 1500 € + PVN (atkarībā no biezuma un armēšanas).",
-    pricingGrindingExample: "Piemērs: 50 m² pamatnes slīpēšana pirms epoksīda ≈ 1500 € + PVN.",
+    pricingGrindingExample: "Piemērs: 50 m² pamatnes slīpēšana un lakošana ≈ 1500 € + PVN.",
     pricingStandardExample: "Piemērs: 50 m² dzīvokļa lamināts ≈ 800 € + PVN (bez materiāla izmaksām).",
 
     testimonialsTitle: "Atsauksmes",
